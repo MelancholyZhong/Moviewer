@@ -14,6 +14,16 @@ const queryMovieByName = async (movie) => {
   return foundMovie;
 };
 
+//Yian: One slight improvement for user experience with the search bar is perhaps use regular expression query instead of findOne() because with findOne()
+//user has to type the exact same letterings of the title word for word, but maybe users would like to search for keyword
+//e.g. (just an example, not sure what properties you have in the movies collection)
+const queryMovieByKeyWord = async(keyword)=>{
+  const database = mongoUtil.getDB();
+  let foundMovie;
+ try{
+   foundMovie = await database.collection("movies").find({$or:[{movie_title: {$regex:keyword,$options:"i"},{director:{$regex:keyword,$options:"i"}}])
+                                                          
+                                                       
 const queryMovieById = async (id) => {
   const database = mongoUtil.getDB();
   const query = { _id: ObjectId(id) };
@@ -26,6 +36,7 @@ const queryMovieById = async (id) => {
 
   return foundMovie;
 };
+
 
 const queryTops = async () => {
   const database = mongoUtil.getDB();
