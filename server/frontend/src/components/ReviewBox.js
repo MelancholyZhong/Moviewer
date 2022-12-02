@@ -5,6 +5,8 @@ import "../styles/ReviewBox.css";
 import PropTypes from "prop-types";
 
 const ReviewBox = ({ movieId, reviewUpdate }) => {
+  //Yian: The userId should be dynamic? Maybe get the ID of the user in session either through backend or useContext and render that information when 
+  //user posts the comment :)
   const defaultReview = { movieId, userId: "melancholyzhong" };
   const [content, setContent] = useState("");
 
