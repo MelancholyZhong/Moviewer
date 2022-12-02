@@ -27,6 +27,7 @@ const NavBar = () => {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link to="./movie" className="nav-link">
+    //Yian: not really sure what this path does as it doesn't do anything when user clicks on it
               Movies
             </Link>
           </li>
