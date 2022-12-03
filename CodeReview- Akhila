@@ -1,0 +1,13 @@
+## Code review- Akhila
+
+The website is very interesting and different.
+
+Good point
+1. The code is very well organized
+2. The code is well-arranged and spearated into its indiviual file
+
+Improvement point
+1. The deployed website did not work when I was trying to log in and upon trying in different browser, I was able to login but could not see any movie on the page
+2. I think removing unnecessary files will be good
+3. Instead of searching the database for the exact match for the movie, you could implement a partial match(regex maybe) else user will not get any results even for the minor chnges
+4. As professor mentioned in class, it is better to have different connections to database from different functions because your entire code won't break if there's any connection error in any of the functions
